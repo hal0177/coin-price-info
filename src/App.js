@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <div>
-        <Head icon="https://via.placeholder.com/300" />
+        <Head />
       </div>
       <div className="container">
         <table className="coin-table">

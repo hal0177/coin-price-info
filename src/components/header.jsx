@@ -1,15 +1,7 @@
 import React, { Component } from 'react';
 import './styles.css';
 import CoinData from './Coins';
-
-/* export function Head(props){
-  return(
-    <div>
-      <img src={ props.icon } alt="header-icon" />
-      <h1>title name</h1>
-    </div>
-  );
-} */
+import icon from '../img/gorilla.png';
 
 var coin = new CoinData();
 
@@ -49,8 +41,8 @@ export default class Coin extends Component {
 export function Head(props){
   return(
     <div className="header">
-      <img src={ props.icon } alt="top icon" id="icon" />
-      <h1>Coin-Exchange</h1>
+      <img src={icon} alt="top icon" id="icon" />
+      <h1>Coin Prices</h1>
     </div>
   );
 }
