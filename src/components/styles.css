@@ -1,0 +1,55 @@
+body {
+  background-color: rgb(34, 34, 34);
+}
+
+.coin-table {
+  border: 1px solid black;
+  width: 95%;
+  height: 95%;
+  margin: auto auto;
+  font-size: 40px;
+}
+
+th {
+  border: 1px solid black;
+  text-align: center;
+  font-size: inherit;
+}
+
+td {
+  border: 1px solid black;
+  text-align: center;
+  font-size: inherit;
+}
+
+.container {
+  background-color: orange;
+  border: 10px solid rgb(20, 20, 20);
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 50%;
+  height: 50%;
+  border-radius: 20px;
+  padding: 0.5%;
+}
+
+#icon {
+  float: left;
+  height: 100px;
+  width: 100px;
+}
+
+h1 {
+  position: relative;
+  font-size: 40px;
+  text-align: center;
+}
+
+.header {
+  padding: 2%;
+  background-color: rgb(80, 80, 80);
+  overflow: auto;
+}
