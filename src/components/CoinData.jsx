@@ -8,13 +8,6 @@ var coinPriceInit = [
     exchange: 'huobipro',
     url: 'https://api.huobi.pro/market/history/trade?symbol=fsnusdt&size=1',
     price: null,
-    statsDay: null,
-    statsWeek: null,
-    statsMonth: null,
-    date: null,
-    balance: null,
-    balanceDecimals: 2,
-    priceUSDDecimalPrecision: 3,
   },
   {
     coin: 'BTC',
@@ -22,13 +15,6 @@ var coinPriceInit = [
     exchange: 'binance',
     url: 'https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT',
     price: null,
-    statsDay: null,
-    statsWeek: null,
-    statsMonth: null,
-    date: null,
-    balance: null,
-    balanceDecimals: 5,
-    priceUSDDecimalPrecision: 0,
   },
   {
     coin: 'ETH',
@@ -36,13 +22,6 @@ var coinPriceInit = [
     exchange: 'binance',
     url: 'https://api.binance.com/api/v3/ticker/price?symbol=ETHUSDT',
     price: null,
-    statsDay: null,
-    statsWeek: null,
-    statsMonth: null,
-    date: null,
-    balance: null,
-    balanceDecimals: 3,
-    priceUSDDecimalPrecision: 2,
   },
 ];
 
@@ -88,6 +67,8 @@ export default function CoinData(props){
   getPrices();
 
   return(
-    coinInfo.price
+    <>
+      {coinInfo.price}
+    </>
   );
 }

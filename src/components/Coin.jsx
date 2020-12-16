@@ -15,7 +15,7 @@ export default function Coin(props){
       setPrice(<CoinData coinName="Ethereum" />);
     }
   }
-  setInterval(callback, 1000);
+  setInterval(callback, 3000);
 
   return(
     <tr className="coin-row">
