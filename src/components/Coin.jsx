@@ -1,24 +1,21 @@
 import React, { useState } from 'react';
 import './styles.css';
-import CoinData from './Coins';
+import CoinData from './CoinData';
 import icon from '../img/gorilla.png';
-
-var coin = new CoinData();
 
 export default function Coin(props){
   const [price, setPrice] = useState('');
 
   const callback = () => {
-    coin.getCoinPrices();
-    if(props.name == 'Fusion'){
-      setPrice(coin.coinPriceLatest[0].price);
-    }else if(props.name == 'Bitcoin'){
-      setPrice(coin.coinPriceLatest[1].price);
-    }else if(props.name == 'Ethereum'){
-      setPrice(coin.coinPriceLatest[2].price);
+    if(props.name === 'Fusion'){
+      setPrice(<CoinData coinName="Fusion" />);
+    }else if(props.name === 'Bitcoin'){
+      setPrice(<CoinData coinName="Bitcoin" />);
+    }else if(props.name === 'Ethereum'){
+      setPrice(<CoinData coinName="Ethereum" />);
     }
   }
-  setInterval(callback, 3000);
+  setInterval(callback, 1000);
 
   return(
     <tr className="coin-row">

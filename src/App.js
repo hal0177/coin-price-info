@@ -1,5 +1,5 @@
 import React from 'react';
-import Coin, { Head } from "./components/header";
+import Coin, { Head } from "./components/Coin";
 
 function App() {
   return (
