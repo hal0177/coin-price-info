@@ -6,7 +6,7 @@
 
 const axios = require('axios');
 
-class Coins {
+class CoinData {
   constructor() {
     console.log(' In Coins constructor');
     this.pubKey = null;
@@ -106,4 +106,4 @@ class Coins {
   };
 }
 
-export default Coins;
+export default CoinData;

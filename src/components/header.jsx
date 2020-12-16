@@ -1,44 +1,35 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import './styles.css';
 import CoinData from './Coins';
 import icon from '../img/gorilla.png';
 
 var coin = new CoinData();
 
-export default class Coin extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      price: null,
+export default function Coin(props){
+  const [price, setPrice] = useState('');
+
+  const callback = () => {
+    coin.getCoinPrices();
+    if(props.name == 'Fusion'){
+      setPrice(coin.coinPriceLatest[0].price);
+    }else if(props.name == 'Bitcoin'){
+      setPrice(coin.coinPriceLatest[1].price);
+    }else if(props.name == 'Ethereum'){
+      setPrice(coin.coinPriceLatest[2].price);
     }
   }
+  setInterval(callback, 3000);
 
-  componentDidMount() {
-    var callback = () => {
-      coin.getCoinPrices();
-      if(this.props.name == 'Fusion'){
-        this.setState({price: coin.coinPriceLatest[0].price});
-      }else if(this.props.name == 'Bitcoin'){
-        this.setState({price: coin.coinPriceLatest[1].price});
-      }else if(this.props.name == 'Ethereum'){
-        this.setState({price: coin.coinPriceLatest[2].price});
-      }
-    }
-    setInterval(callback, 3000);
-  }
-
-  render(){
-    return(
-      <tr className="coin-row">
-        <td>{this.props.name}</td>
-        <td>{this.props.ticker}</td>
-        <td>${this.state.price}</td>
-      </tr>
-    );
-  }
+  return(
+    <tr className="coin-row">
+      <td>{ props.name }</td>
+      <td>{ props.ticker }</td>
+      <td>${ price }</td>
+    </tr>
+  );
 }
 
-export function Head(props){
+export function Head(){
   return(
     <div className="header">
       <img src={icon} alt="top icon" id="icon" />
