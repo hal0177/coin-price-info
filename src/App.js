@@ -1,7 +1,9 @@
-import React from 'react';
-import Coin, { Head } from "./components/Coin";
+
+import './Coin.css';
+import Coin, { Head } from './Coin';
 
 function App() {
+
   return (
     <>
       <div>
@@ -17,9 +19,7 @@ function App() {
             </tr>
           </thead>
           <tbody>
-            <Coin name="Bitcoin" ticker="BTC" />
-            <Coin name="Ethereum" ticker="ETH" />
-            <Coin name="Fusion" ticker="FSN" />
+            <Coin coin={['bitcoin', 'ethereum', 'fusion']} ticker={['BTC', 'ETH', 'FSN']} />
           </tbody>
         </table>
       </div>
