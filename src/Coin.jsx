@@ -8,17 +8,17 @@ export default function Coin(props){
   return(
     <>
       <tr className="coin-row">
-        <td>{ props.coin[0] }</td>
+        <td>Bitcoin</td>
         <td>{ props.ticker[0] }</td>
         <td>$<CoinData coin={ props.coin[0] } /></td>
       </tr>
       <tr className="coin-row">
-        <td>{ props.coin[1] }</td>
+        <td>Ethereum</td>
         <td>{ props.ticker[1] }</td>
         <td>$<CoinData coin={ props.coin[1] } /></td>
       </tr>
       <tr className="coin-row">
-        <td>{ props.coin[2] }</td>
+        <td>Fusion</td>
         <td>{ props.ticker[2] }</td>
         <td>$<CoinData coin={ props.coin[2] } /></td>
       </tr>
