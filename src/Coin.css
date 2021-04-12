@@ -2,7 +2,13 @@ body {
   background-color: rgb(34, 34, 34);
 }
 
+* {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
 .coin-table {
+  border-collapse: collapse;
   border: 1px solid black;
   width: 95%;
   height: 95%;
@@ -24,7 +30,7 @@ td {
 
 .container {
   background-color: gold;
-  border: 10px solid rgb(20, 20, 20);
+  box-shadow: 5px 5px 1px gold;
   display: block;
   position: absolute;
   top: 60%;
