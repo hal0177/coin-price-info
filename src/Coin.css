@@ -30,7 +30,7 @@ td {
 
 .container {
   background-color: gold;
-  box-shadow: 5px 5px 1px gold;
+  box-shadow: 3px 3px 5px #e6e600;
   display: block;
   position: absolute;
   top: 60%;
